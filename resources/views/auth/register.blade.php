@@ -2,11 +2,18 @@
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <!-- Name -->
+        <!-- username -->
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            <x-input-label for="username" :value="__('Username')" />
+            <x-text-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('username')" class="mt-2" />
+        </div>
+
+        <!-- fullname -->
+        <div>
+            <x-input-label for="fullname" :value="__('Fullname')" />
+            <x-text-input id="fullname" class="block mt-1 w-full" type="text" name="fullname" :value="old('fullname')" required autofocus autocomplete="fullname" />
+            <x-input-error :messages="$errors->get('fullname')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
@@ -37,6 +44,27 @@
                             name="password_confirmation" required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <!-- address -->
+        <div>
+            <x-input-label for="address" :value="__('Address')" />
+            <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autofocus autocomplete="address" />
+            <x-input-error :messages="$errors->get('address')" class="mt-2" />
+        </div>
+        
+        <!-- birthdate -->
+        <div>
+            <x-input-label for="birthdate" :value="__('Birthdate')" />
+            <x-text-input id="birthdate" class="block mt-1 w-full" type="date" name="birthdate" :value="old('birthdate')" required autofocus autocomplete="birthdate" />
+            <x-input-error :messages="$errors->get('birthdate')" class="mt-2" />
+        </div>
+        
+        <!-- phoneNumber -->
+        <div>
+            <x-input-label for="phoneNumber" :value="__('PhoneNumber')" />
+            <x-text-input id="phoneNumber" class="block mt-1 w-full" type="date" name="phoneNumber" :value="old('phoneNumber')" required autofocus autocomplete="phoneNumber" />
+            <x-input-error :messages="$errors->get('phoneNumber')" class="mt-2" />
         </div>
 
         <div class="flex items-center justify-end mt-4">
