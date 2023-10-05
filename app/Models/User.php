@@ -25,6 +25,8 @@ class User extends Authenticatable
         'address',
         'phoneNumber',
         'birthdate',
+        'agama',
+        'jenis_kelamin'
     ];
 
     /**

@@ -66,6 +66,21 @@
             <x-text-input id="phoneNumber" class="block mt-1 w-full" type="date" name="phoneNumber" :value="old('phoneNumber')" required autofocus autocomplete="phoneNumber" />
             <x-input-error :messages="$errors->get('phoneNumber')" class="mt-2" />
         </div>
+        
+        <!-- Pangeran Jonathan (6706223030) D3 RPLA 46 03 -->
+        <!-- agama -->
+        <div>
+            <x-input-label for="agama" :value="__('Agama')" />
+            <x-text-input id="agama" class="block mt-1 w-full" type="date" name="agama" :value="old('agama')" required autofocus autocomplete="agama" />
+            <x-input-error :messages="$errors->get('agama')" class="mt-2" />
+        </div>
+
+        <!-- jenis_kelamin -->
+        <div>
+            <x-input-label for="jenis_kelamin" :value="__('Jenis_kelamin')" />
+            <x-text-input id="jenis_kelamin" class="block mt-1 w-full" type="date" name="jenis_kelamin" :value="old('jenis_kelamin')" required autofocus autocomplete="jenis_kelamin" />
+            <x-input-error :messages="$errors->get('jenis_kelamin')" class="mt-2" />
+        </div>
 
         <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">

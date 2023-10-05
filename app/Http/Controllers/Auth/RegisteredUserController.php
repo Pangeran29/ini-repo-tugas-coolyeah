@@ -30,6 +30,8 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        // Pangeran Jonathan (6706223030)
+        // D3 RPLA 46-03A
         $request->validate([
             'username' => ['required', 'string', 'max:100'],
             'fullname' => ['required', 'string', 'max:100'],
@@ -38,6 +40,8 @@ class RegisteredUserController extends Controller
             'address' => ['required', 'string', 'max:1000'],
             'birthdate' => ['required', 'date'],
             'phoneNumber' => ['required', 'string', 'max:20'],
+            'agama' => ['required', 'string', 'max:20'],
+            'jenis_kelamin' => ['required', 'string', 'max:4'],
         ]);
 
         $user = User::create([
@@ -48,6 +52,8 @@ class RegisteredUserController extends Controller
             'address' => $request->address,
             'birthdate' => $request->birthdate,
             'phoneNumber' => $request->phoneNumber,
+            'agama' => $request->phoneNumber,
+            'jenis_kelamin' => $request->phoneNumber,
         ]);
 
         event(new Registered($user));
