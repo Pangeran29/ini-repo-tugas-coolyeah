@@ -1,5 +1,7 @@
+<!--     // Pangeran Jonathan | 6706223030 | D3 RPLA 46-03
+ -->
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="/userStore">
         @csrf
 
         <!-- username -->
@@ -93,3 +95,4 @@
         </div>
     </form>
 </x-guest-layout>
+
