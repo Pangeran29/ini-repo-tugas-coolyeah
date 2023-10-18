@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\UsersDataTable;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -9,10 +10,9 @@ class UserController extends Controller
 {
     // Pangeran Jonathan | 6706223030 | D3 RPLA 46-03
 
-    public function index() {
-        $user = User::all();
-        // dd($collection);
-        return view('user.index', compact(['user']));
+    public function index(UsersDataTable $dataTable)
+    {
+        return $dataTable->render('user.index');
     }
 
     public function registration() {
