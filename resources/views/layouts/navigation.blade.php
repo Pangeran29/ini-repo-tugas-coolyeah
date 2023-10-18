@@ -21,14 +21,22 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="/user" >
+                    <x-nav-link href="/user">
                         {{ __('User') }}
+                    </x-nav-link>
+
+                    <x-nav-link href="userRegistration">
+                        {{ __('Registrasi User') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link href="/koleksi" >
+                    <x-nav-link href="/koleksi">
                         {{ __('Koleksi') }}
+                    </x-nav-link>
+
+                    <x-nav-link href="koleksiTambah">
+                        {{ __('Tambah Koleksi') }}
                     </x-nav-link>
                 </div>
             </div>
