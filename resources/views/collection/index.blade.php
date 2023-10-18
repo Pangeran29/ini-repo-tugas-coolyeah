@@ -1,3 +1,4 @@
+<!-- 6706223030 (Pangeran Jonathan) D3 RPLA 46-03 -->
 @extends('layouts.app')
 
 @section('content')
